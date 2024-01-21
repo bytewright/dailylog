@@ -1,0 +1,18 @@
+type HemoDynamicsMeasurement {
+    id: ID!
+    diastole: Int!
+    systole: Int!
+    heartRate: Int
+    measurementUtc: String!
+    note: String
+}
+
+# The Root Query for the application
+type Query {
+    getAll(count: Int, offset: Int): [HemoDynamicsMeasurement]!
+}
+
+# The Root Mutation for the application
+#type Mutation {
+#    createPost(title: String!, text: String!, category: String, authorId: String!) : Post!
+#}
